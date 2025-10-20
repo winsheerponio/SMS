@@ -4,18 +4,16 @@
     {
       "source": "/api/:path*",
       "destination": "/api"
-    },
+    }
+  ],
+  "redirects": [
     {
       "source": "/app",
-      "destination": "/frontend/index.html"
+      "destination": "/app.html"
     },
     {
       "source": "/dashboard",
-      "destination": "/frontend/index.html"
-    },
-    {
-      "source": "/",
-      "destination": "/frontend/landing.html"
+      "destination": "/app.html"
     }
   ],
   "headers": [
@@ -28,5 +26,7 @@
         { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
